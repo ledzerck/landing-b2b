@@ -1,0 +1,8 @@
+---
+import {Image} from 'astro:assets';
+import bcorp from '../images/awards/b-corp.png';
+---
+<section id="copyright" class="py-5 border-t border-shadow-700">
+    <Image src={bcorp} alt="B-Corp" loading="lazy" decoding="async" class="h-auto w-auto object-contain mb-5"/>
+    <p class="text-sm text-zinc-500">Copyright © {new Date().getFullYear()} DEVF HOLDINGS CORP. Todos los derechos reservados. <br/>DEV.F ofrece una solución innovadora a la inclusión educativa con programas EdTech que ayudan a las personas a convertirse en desarrolladores de software, dieñadores de producto y científicos de datos, así como obtener habilidades tecnológicas para así conseguir oportunidades laborales de alta calidad de manera ágil y accesible.</p>
+</section>

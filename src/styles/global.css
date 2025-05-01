@@ -22,4 +22,36 @@
     --color-brand-700: #5a11e7;
     --color-brand-800: #480db9;
     --color-brand-900: #360a8b;
+
+    /*Animaciones*/
+    --animate-colorful: colorful 5s linear infinite alternate;
+    @keyframes colorful {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+    --animate-colorful-button: colorful-button 5s linear infinite alternate;
+    @keyframes colorful-button {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+}
+
+.gradient {
+    background: linear-gradient(90deg, #00ffc7, #f0f, #6f00ff, #ffa600, #00ffc7);
+    background-size: 400% 100%;
+}
+
+.gradient-button {
+    background: linear-gradient(-45deg, #691eff, #f0f, #691eff);
+    background-size: 200% 200%;
 }

@@ -1,0 +1,73 @@
+---
+import {Image} from 'astro:assets';
+// Awards
+import becalos from '../images/awards/becalos.png';
+import bid from '../images/awards/bid.png';
+import ey from '../images/awards/ey.png';
+import facebook from '../images/awards/facebook.png';
+import forbes from '../images/awards/forbes.png';
+import google from '../images/awards/google.png';
+import holoniq from '../images/awards/holoniq.png';
+import redbox from '../images/awards/redbox.png';
+import techstars from '../images/awards/techstars.png';
+
+const awards = [
+    {
+        name: 'Techstars',
+        image: techstars,
+        description: 'Seleccionados como una de las 12 startups para participar en la aceleradora Techstars NY 2023 - Powered by Summit Ventures',
+    },
+    {
+        name: 'RedBox',
+        image: redbox,
+        description: 'Reconocidos con el Premio Redbox como la Startup más innovadora de México en 2017.',
+    },
+    {
+        name: 'Forbes',
+        image: forbes,
+        description: 'Reconocidos por Forbes como una de las 30 empresas prometedoras de México en 2018.',
+    },
+    {
+        name: 'Google',
+        image: google,
+        description: 'Una de las 9 Startups seleccionadas para participar en el Google Launchpad Accelerator LATAM 2019.',
+    },
+    {
+        name: 'Bid Lab',
+        image: bid,
+        description: 'Ganadores del primer lugar en el Desafío de Bootcamps en América Latina del BID Lab en 2020.',
+    },
+    {
+        name: 'Holon IQ',
+        image: holoniq,
+        description: 'Seleccionados como una de las startups EdTech más innovadoras de América Latina en 2020.',
+    },
+    {
+        name: 'Facebook',
+        image: facebook,
+        description: 'Trabajamos en conjunto para capacitar a más de 200 alumnos en cursos de programación y diseño.',
+    },
+    {
+        name: 'Ey',
+        image: ey,
+        description: 'Nominados como Emprendedores del Año 2022 en la categoría de Emprendimiento Social.',
+    },
+    {
+        name: 'Bécalos',
+        image: becalos,
+        description: 'Otorgamos becas del 100% para cursos de programación dirigidos a jóvenes del Sur-Sureste mexicano en 2023.',
+    }
+]
+---
+<section id="awards" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-5 gap-8 items-start">
+
+    {
+        awards.map(award => (
+            <article class="box-border basis-1/3 text-sm">
+                <Image src={award.image} alt={award.name} loading="lazy" decoding="async" class="h-5 w-auto object-contain mb-3"/>
+                <p class="text-zinc-400">{award.description}</p>
+            </article>
+        ))
+    }
+
+</section>
