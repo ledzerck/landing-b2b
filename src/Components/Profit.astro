@@ -1,0 +1,58 @@
+---
+interface beneficios {
+    icon: string;
+    title: string;
+    description: string;
+}
+const beneficios = [
+    {
+        icon: '🚀',
+        title: 'Impulso a la innovación',
+        description: 'Equipa a tu equipo con las últimas tecnologías (Python, Java, Cloud, IA...) para crear soluciones disruptivas.'
+    },
+    {
+        icon: '⏱️',
+        title: 'Mayor eficiencia operativa',
+        description: 'Equipa a tu equipo con las últimas tecnologías (Python, Java, Cloud, IA...) para crear soluciones disruptivas.'
+    },
+    {
+        icon: '📈',
+        title: 'ROI medible',
+        description: 'Convierte la capacitación en un activo estratégico. Mide el impacto directo en productividad y calidad.'
+    },
+    {
+        icon: '🔒',
+        title: 'Retención de talento clave',
+        description: 'Demuestra compromiso con el crecimiento de tus empleados, aumentando su lealtad y reduciendo la rotación.'
+    },
+    {
+        icon: '🏆',
+        title: 'Ventaja competitiva',
+        description: 'Desarrolla capacidades internas únicas que te diferencien claramente de la competencia.'
+    },
+    {
+        icon: '🤝',
+        title: 'Adaptabilidad garantizada',
+        description: 'Programas 100% personalizables a tus objetivos, stack tecnológico y nivel actual de tu equipo.'
+    }
+]
+
+
+---
+
+<section id="profit" class="py-8 bg-shadow-900">
+    <div class="container mx-auto flex flex-col gap-8 p-5 max-w-[1024px]">
+        <h2 class="text-center text-3xl font-semibold mb-7">Invierte en tu equipo, genera resultados tangibles</h2>
+        <div class="grid grid-cols-3 gap-8">
+            {
+                beneficios.map(beneficio => (
+                    <article class="border-shadow-700 border-1 bg-shadow-800 p-5 rounded-xl">
+                        <div class="text-4xl mb-2">{beneficio.icon}</div>
+                        <h3 class="text-xl font-semibold mb-2">{beneficio.title}</h3>
+                        <p class="text-zinc-400">{beneficio.description}</p>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>
