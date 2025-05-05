@@ -1,9 +1,26 @@
 ---
-
+import { Image } from 'astro:assets';
+import problema from '../images/problema-capacitacion-empresas.png';
 ---
 
-<sectio id="problem" p-5>
-    <div class="container">
-        <h1>Hola</h1>
+<section id="problema" class="py-8">
+    <div class="container mx-auto flex flex-col items-stretch gap-8 p-5 max-w-[1024px]">
+
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-2">
+                <div class="mask-[linear-gradient(to_bottom,black_80%,transparent)]">
+                    <Image src={problema} alt="¿Tu equipo está preparado para aprovechar las nuevas tecnologías?" loading="lazy" decoding="async" class="w-full mb-5"/>
+                </div>
+            </div>
+            <div class="flex-3">
+                <h2 class="text-5xl font-extrabold mb-5">¿Tu equipo aprovecha las nuevas tecnologías?</h2>
+                <p>Mantenerse actualizado es crucial en un mercado cambiante, pero la falta de habilidades frena la innovación y los proyectos. Además, contratar nuevo personal es caro y no asegura una buena adaptación.</p>
+            </div> 
+        </div>
+        
+        <div class="flex-2 border-shadow-600 border-1 bg-shadow-650 p-5 rounded-xl">
+            <h2 class="text-5xl font-extrabold mb-5">Potenciamos tu talento interno</h2>
+            <p>Especializados exclusivamente en el sector empresarial, diseñamos e impartimos programas de capacitación a medida en habilidades digitales cruciales como programación web, ciencia de datos y la implementación estratégica de herramientas de Inteligencia Artificial. Transformamos a tus empleados actuales en los expertos tecnológicos que tu negocio necesita para crecer, innovar y liderar, permitiéndote evitar los altos costos y la incertidumbre del reclutamiento externo.</p>
+        </div>
     </div>
-</sectio>
+</section>
