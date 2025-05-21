@@ -23,6 +23,8 @@
     --color-brand-700: #5a11e7;
     --color-brand-800: #480db9;
     --color-brand-900: #360a8b;
+    --color-mag-500:  #FF00FF;
+    --color-sun-500: #FFA600;
 
     /*Animaciones*/
     --animate-colorful: colorful 5s linear infinite alternate;
@@ -35,16 +37,14 @@
         }
     }
 
-    --animate-colorful-button: colorful-button 5s linear infinite alternate;
-    @keyframes colorful-button {
-        0% {
-            background-position: 0% 50%;
-        }
-        100% {
-            background-position: 100% 50%;
-        }
-    }
 
+}
+
+.back-h {
+    background: url("/back-show.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .gradient {
@@ -53,6 +53,6 @@
 }
 
 .gradient-button {
-    background: linear-gradient(-45deg, #691eff, #f0f, #691eff);
-    background-size: 200% 200%;
+    background: linear-gradient(-45deg, #FFA600, #FF00FF);
+    background-size: 100% 100%;
 }
