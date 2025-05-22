@@ -8,7 +8,7 @@ import show from '../images/devf-capacitacion-inteligencia-artificial.png';
         <div class="hero-text max-w-lg">
             <h1 class="mb-4 leading-7">
                 <span class="text-2xl/14 font-semibold">Capacitación en:</span>
-                <span class="block text-5xl/14 font-bold min-h-[7rem] md:text-7xl/17 md:font-medium md:min-h-[8.5rem] relative"><span id="typewriter-text" class="bg-gradient-to-r from-mag-500 to-sun-500 bg-clip-text text-transparent">Ciencia de Datos</span><span class="typewriter-cursor">|</span></span>
+                <span class="block text-5xl leading-[3.5rem] font-bold min-h-[7rem] md:text-7xl md:leading-[4.25rem] md:min-h-[8.5rem] relative"><span id="typewriter-text" class="bg-gradient-to-r from-mag-500 to-sun-500 bg-clip-text text-transparent">Ciencia de Datos</span></span>
             </h1>
             <p class="md:mb-6 text-xl text-zinc-200">Impulsa tu actividad empresarial, desarrollando el <bold class="font-bold">talento tecnológico</bold> de tu equipo.</p>
             <button class="gradient-button animate-colorful-button rounded-full py-2 px-6 mt-6 mb-6 text-shadow-sm">Solicitar una consulta estratégica</button>
@@ -68,27 +68,19 @@ if (typewriterTextElement) {
 </script>
 
 <style>
-  .typewriter-cursor {
-    display: inline-block; /* Permite que fluya con el texto */
-    margin-left: 2px;
-    animation: blink 0.7s infinite;
-    /* Eliminamos position: absolute y bottom para que siga el flujo del texto */
-    /* position: absolute; */
-    /* bottom: 0.1em; */
-    font-weight: 300; 
-    vertical-align: baseline; /* Opcional: ajusta la alineación vertical si es necesario */
-  }
-
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
   }
 
   #typewriter-text {
-    white-space: pre-wrap; /* Asegura que \n genere saltos de línea y se respeten los espacios */
+    white-space: pre-wrap;
   }
 
-  #typewriter-text:empty::after {
-      content: "\00a0"; /* Mantiene el espacio si está vacío, aunque min-h-[7rem] ya ayuda */
+  #typewriter-text::after {
+    content: "|";
+    color: white;
+    font-weight: 300;
+    animation: blink 0.7s infinite;
   }
 </style>

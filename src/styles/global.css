@@ -25,6 +25,7 @@
     --color-brand-900: #360a8b;
     --color-mag-500:  #FF00FF;
     --color-sun-500: #FFA600;
+    --color-neutral-500: #282D47;
 
     /*Animaciones*/
     --animate-colorful: colorful 5s linear infinite alternate;
